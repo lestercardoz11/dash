@@ -1,9 +1,10 @@
 import React from 'react';
-import { AppleIcon, GoogleIcon } from './assets/SocialIcons';
+import { Link } from 'react-router-dom';
+import { AppleIcon, GoogleIcon } from './icons/SocialIcons';
 
 const Login = () => {
   return (
-    <div className='w-9/20 my-10'>
+    <div className='w-9/20 my-auto'>
       <p className='text-4xl font-montserrat font-bold'>Sign In</p>
       <p className='text-base font-lato font-normal'>Sign in to your account</p>
       <div className='w-full my-5 flex'>
@@ -36,7 +37,7 @@ const Login = () => {
               id='email'
               type='email'
               name='email'
-              className='w-full px-4 py-2 font-semibold font-lato bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-200'
+              className='w-full px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
             />
           </div>
           <div className='flex flex-col mb-4'>
@@ -50,7 +51,7 @@ const Login = () => {
               id='password'
               type='password'
               name='password'
-              className='w-full px-4 py-2 font-semibold font-lato bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-200'
+              className='w-full px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
             />
           </div>
 
@@ -69,9 +70,9 @@ const Login = () => {
       </div>
       <div className='w-full my-5 flex justify-center font-lato font-medium text-secondary'>
         Don’t have an account?
-        <button className='ml-1 text-link hover:text-blue-700'>
+        <Link to='/register' className='ml-1 text-link hover:text-blue-700'>
           Register here
-        </button>
+        </Link>
       </div>
     </div>
   );

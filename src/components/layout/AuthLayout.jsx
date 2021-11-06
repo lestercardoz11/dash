@@ -6,7 +6,9 @@ const AuthLayout = ({ children }) => {
       <div className='w-2/5 bg-primary flex justify-center items-center'>
         <p className='text-7xl font-bold text-white font-montserrat'>Dash.</p>
       </div>
-      <div className='w-3/5 flex justify-center items-center'>{children}</div>
+      <div className='w-3/5 h-screen flex justify-center overflow-scroll'>
+        {children}
+      </div>
     </div>
   );
 };

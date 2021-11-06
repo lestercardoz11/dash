@@ -16,6 +16,12 @@ module.exports = {
         'light-grey': '#B0B0B0',
         'light-red': '#E9A0A0',
         'light-green': '#9BDD7C',
+        'light-blue': '#6972C3',
+        'dark-gray': '#666666',
+        'card-1': '#DDEFE0',
+        'card-2': '#F4ECDD',
+        'card-3': '#EFDADA',
+        'card-4': '#DEE0EF',
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

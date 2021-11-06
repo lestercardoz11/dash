@@ -1,6 +1,7 @@
 import React from 'react';
-import { AppleIcon, GoogleIcon } from './assets/SocialIcons';
-import { EyeIcon, EyeOffIcon } from './assets/EyeIcons';
+import { AppleIcon, GoogleIcon } from './icons/SocialIcons';
+import { EyeIcon, EyeOffIcon } from './icons/EyeIcons';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   return (
@@ -41,7 +42,7 @@ const Register = () => {
                   id='first-name'
                   type='first-name'
                   name='first-name'
-                  className='w-full mt-2 px-4 py-2 font-semibold font-lato bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-200'
+                  className='w-full mt-2 px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
                 />
               </div>
             </div>
@@ -56,7 +57,7 @@ const Register = () => {
                   id='last-name'
                   type='last-name'
                   name='last-name'
-                  className='w-full mt-2 px-4 py-2 font-semibold font-lato bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-200'
+                  className='w-full mt-2 px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
                 />
               </div>
             </div>
@@ -71,7 +72,7 @@ const Register = () => {
               id='email'
               type='email'
               name='email'
-              className='w-full px-4 py-2 font-semibold font-lato bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-200'
+              className='w-full px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
             />
           </div>
           <div className='flex flex-col mb-4'>
@@ -91,7 +92,7 @@ const Register = () => {
                 id='password'
                 type='password'
                 name='password'
-                className='w-full px-4 py-2 font-semibold font-lato bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-200'
+                className='w-full px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
               />
             </div>
           </div>
@@ -113,7 +114,7 @@ const Register = () => {
                 id='confirm-password'
                 type='text'
                 name='confirm-password'
-                className='w-full px-4 py-2 font-semibold font-lato bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-200'
+                className='w-full px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
               />
             </div>
           </div>
@@ -139,9 +140,9 @@ const Register = () => {
       </div>
       <div className='w-full my-5 flex justify-center font-lato font-medium text-secondary'>
         Already have an account?
-        <button className='ml-1 text-link hover:text-blue-700'>
+        <Link to='/login' className='ml-1 text-link hover:text-blue-700'>
           Sign in here
-        </button>
+        </Link>
       </div>
     </div>
   );
