@@ -9,7 +9,7 @@ import {
 
 const Sidebar = ({ nav, setNav }) => {
   return (
-    <div className='w-1/5 bg-primary px-13 py-15 rounded-4xl flex flex-col'>
+    <div className='w-1/5 bg-primary px-10 py-15 rounded-4xl flex flex-col'>
       <p className='text-4xl font-bold text-white font-montserrat'>Dash.</p>
       <div className='flex flex-col justify-between flex-1 mt-5'>
         <nav>

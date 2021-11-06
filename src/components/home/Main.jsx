@@ -1,5 +1,6 @@
 import React from 'react';
 import Dashboard from './section/Dashboard';
+import Settings from './section/Settings';
 
 const Main = ({ nav }) => {
   const renderModal = () => {
@@ -17,7 +18,7 @@ const Main = ({ nav }) => {
         return;
 
       case 4:
-        return;
+        return <Settings />;
 
       default:
         return <Dashboard />;
