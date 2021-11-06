@@ -8,10 +8,10 @@ import AuthLayout from './components/layout/AuthLayout';
 function App() {
   return (
     <Routes>
-      <Route path='/dash' element={<Home />} />
-      <Route path='/dash/login' element={<AuthLayout children={<Login />} />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/login' element={<AuthLayout children={<Login />} />} />
       <Route
-        path='/dash/register'
+        path='/register'
         element={<AuthLayout children={<Register />} />}
       />
     </Routes>
