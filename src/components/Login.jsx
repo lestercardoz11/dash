@@ -1,15 +1,14 @@
 import React from 'react';
-import { AppleIcon } from './assets/AppleIcon';
-import { GoogleIcon } from './assets/GoogleIcon';
+import { AppleIcon, GoogleIcon } from './assets/SocialIcons';
 
 const Login = () => {
   return (
-    <div className='w-9/20'>
+    <div className='w-9/20 my-10'>
       <p className='text-4xl font-montserrat font-bold'>Sign In</p>
       <p className='text-base font-lato font-normal'>Sign in to your account</p>
       <div className='w-full my-5 flex'>
         <div className='w-1/2 flex justify-start'>
-          <button className='w-11/12 flex justify-center bg-white p-2 text-xs text-black-mana font-montserrat rounded-xl'>
+          <button className='w-11/12 flex justify-center bg-white p-2 text-xs text-secondary font-montserrat rounded-xl'>
             <span className='mr-2'>
               <GoogleIcon />
             </span>
@@ -17,7 +16,7 @@ const Login = () => {
           </button>
         </div>
         <div className='w-1/2 flex justify-end'>
-          <button className='w-11/12 flex justify-center bg-white p-2 text-xs text-black-mana font-montserrat rounded-xl'>
+          <button className='w-11/12 flex justify-center bg-white p-2 text-xs text-secondary font-montserrat rounded-xl'>
             <span className='mr-2'>
               <AppleIcon />
             </span>
@@ -27,7 +26,7 @@ const Login = () => {
       </div>
       <div className='w-full bg-white p-7 rounded-2xl'>
         <form action='#'>
-          <div className='flex flex-col mb-6'>
+          <div className='flex flex-col mb-4'>
             <label
               htmlFor='email'
               className='mb-2 text-base font-semibold font-lato'>
@@ -40,7 +39,7 @@ const Login = () => {
               className='w-full px-4 py-2 font-semibold font-lato bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-200'
             />
           </div>
-          <div className='flex flex-col mb-6'>
+          <div className='flex flex-col mb-4'>
             <label
               htmlFor='password'
               className='mb-2 text-base font-semibold font-lato'>
@@ -55,8 +54,8 @@ const Login = () => {
             />
           </div>
 
-          <div className='mb-6'>
-            <button className='font-lato font-medium text-mariner hover:text-blue-700'>
+          <div className='mb-4'>
+            <button className='font-lato font-medium text-link hover:text-blue-700'>
               Forgot password?
             </button>
           </div>
@@ -68,9 +67,9 @@ const Login = () => {
           </button>
         </form>
       </div>
-      <div className='w-full my-5 flex justify-center font-lato font-medium text-black-mana'>
+      <div className='w-full my-5 flex justify-center font-lato font-medium text-secondary'>
         Don’t have an account?
-        <button className='ml-1 text-mariner hover:text-blue-700'>
+        <button className='ml-1 text-link hover:text-blue-700'>
           Register here
         </button>
       </div>
