@@ -70,7 +70,9 @@ const Login = () => {
       </div>
       <div className='w-full my-5 flex justify-center font-lato font-medium text-secondary'>
         Don’t have an account?
-        <Link to='/register' className='ml-1 text-link hover:text-blue-700'>
+        <Link
+          to='/dash/register'
+          className='ml-1 text-link hover:text-blue-700'>
           Register here
         </Link>
       </div>

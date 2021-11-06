@@ -140,7 +140,7 @@ const Register = () => {
       </div>
       <div className='w-full my-5 flex justify-center font-lato font-medium text-secondary'>
         Already have an account?
-        <Link to='/login' className='ml-1 text-link hover:text-blue-700'>
+        <Link to='/dash/login' className='ml-1 text-link hover:text-blue-700'>
           Sign in here
         </Link>
       </div>
