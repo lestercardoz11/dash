@@ -1,8 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { AppleIcon, GoogleIcon } from './icons/SocialIcons';
 
 const Login = () => {
+  let navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = (e, mail, pw) => {
+    e.preventDefault();
+
+    if (mail === 'dash@gmail.com' && pw === 'dash%123') {
+      const user = {
+        isLoggedIn: true,
+        email: mail,
+      };
+      localStorage.setItem('user', JSON.stringify(user));
+      navigate('/');
+    }
+  };
+
   return (
     <div className='w-9/20 my-auto'>
       <p className='text-4xl font-montserrat font-bold'>Sign In</p>
@@ -37,6 +54,7 @@ const Login = () => {
               id='email'
               type='email'
               name='email'
+              onChange={(e) => setEmail(e.target.value)}
               className='w-full px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
             />
           </div>
@@ -51,6 +69,7 @@ const Login = () => {
               id='password'
               type='password'
               name='password'
+              onChange={(e) => setPassword(e.target.value)}
               className='w-full px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
             />
           </div>
@@ -63,6 +82,7 @@ const Login = () => {
 
           <button
             type='submit'
+            onClick={(e) => handleLogin(e, email, password)}
             className='w-full py-2 text-white text-base font-bold tracking-wider rounded-lg bg-primary hover:opacity-90 focus:outline-none transition duration-100 ease-in'>
             Sign In
           </button>
