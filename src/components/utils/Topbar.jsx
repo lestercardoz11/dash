@@ -2,8 +2,11 @@ import BellIcon from '../icons/BellIcon';
 import Profile from '../assets/profile.png';
 import { ProfileIcon } from '../icons/ProfileIcon';
 import SearchIcon from '../icons/SearchIcon';
+import { useState } from 'react';
 
 const Topbar = ({ header }) => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <div className='pt-5 flex justify-between items-center'>
       <p className='text-2xl font-bold font-montserrat'>{header}</p>
@@ -25,9 +28,21 @@ const Topbar = ({ header }) => {
         <button className='mx-2.5 p-1.5'>
           <BellIcon />
         </button>
-        <button className='ml-2.5'>
-          <ProfileIcon url={Profile} />
-        </button>
+        <div className='relative'>
+          <button className='ml-2.5' onClick={() => setShowMenu(!showMenu)}>
+            <ProfileIcon url={Profile} />
+          </button>
+
+          {showMenu ? (
+            <div className='absolute right-0 mt-2 font-montserrat text-sm text-secondary bg-field rounded-md shadow-lg overflow-visible z-20'>
+              <div className='py-2'>
+                <button className='w-28 flex items-center px-4 py-3 border-l-4 tracking-wider hover:font-bold'>
+                  Sign out
+                </button>
+              </div>
+            </div>
+          ) : null}
+        </div>
       </div>
     </div>
   );

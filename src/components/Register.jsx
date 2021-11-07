@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppleIcon, GoogleIcon } from './icons/SocialIcons';
 import { EyeIcon, EyeOffIcon } from './icons/EyeIcons';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+  const [showPassword1, setShowPassword1] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(true);
+
   return (
     <div className='w-9/20 my-10'>
       <p className='text-4xl font-montserrat font-bold'>Create an account</p>
@@ -83,14 +86,14 @@ const Register = () => {
             </label>
 
             <div className='relative'>
-              <div className='inline-flex items-center justify-center absolute right-0 top-0 h-full w-10 text-gray-400'>
-                <span>
-                  <EyeIcon />
-                </span>
+              <div
+                className='inline-flex items-center justify-center absolute right-0 top-0 h-full w-10 text-gray-400 cursor-pointer'
+                onClick={() => setShowPassword1(!showPassword1)}>
+                <span>{showPassword1 ? <EyeOffIcon /> : <EyeIcon />}</span>
               </div>
               <input
                 id='password'
-                type='password'
+                type={showPassword1 ? 'text' : 'password'}
                 name='password'
                 className='w-full px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
               />
@@ -105,14 +108,14 @@ const Register = () => {
             </label>
 
             <div className='relative'>
-              <div className='inline-flex items-center justify-center absolute right-0 top-0 h-full w-10 text-gray-400'>
-                <span>
-                  <EyeOffIcon />
-                </span>
+              <div
+                className='inline-flex items-center justify-center absolute right-0 top-0 h-full w-10 text-gray-400 cursor-pointer'
+                onClick={() => setShowPassword2(!showPassword2)}>
+                <span>{showPassword2 ? <EyeOffIcon /> : <EyeIcon />}</span>
               </div>
               <input
                 id='confirm-password'
-                type='text'
+                type={showPassword2 ? 'text' : 'password'}
                 name='confirm-password'
                 className='w-full px-4 py-2 font-semibold font-lato bg-field rounded-lg focus:outline-none focus:bg-gray-200'
               />
@@ -140,7 +143,7 @@ const Register = () => {
       </div>
       <div className='w-full my-5 flex justify-center font-lato font-medium text-secondary'>
         Already have an account?
-        <Link to='/dash/login' className='ml-1 text-link hover:text-blue-700'>
+        <Link to='/login' className='ml-1 text-link hover:text-blue-700'>
           Sign in here
         </Link>
       </div>

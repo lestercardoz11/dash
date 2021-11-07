@@ -26,6 +26,9 @@ module.exports = {
         'card-2': '#F4ECDD',
         'card-3': '#EFDADA',
         'card-4': '#DEE0EF',
+        'legend-1': '#98D89E',
+        'legend-2': '#F6DC7D',
+        'legend-3': '#EE8484',
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
@@ -45,7 +48,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      fontWeight: ['hover'],
+    },
   },
   plugins: [],
 };

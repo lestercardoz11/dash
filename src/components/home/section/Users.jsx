@@ -3,29 +3,11 @@ import Pagination from '../../utils/Pagination';
 import { AddIcon, FilterIcon } from '../../icons/ButtonIcons';
 import SearchIcon from '../../icons/SearchIcon';
 import Topbar from '../../utils/Topbar';
-import { ProfileIcon } from '../../icons/ProfileIcon';
 import Loader from '../../icons/Loader';
+import User from '../../utils/User';
+import Error from '../../utils/Error';
 
 const url = 'https://randomuser.me/api/?results=40';
-
-const User = (props) => {
-  const { index, name, email, gender, country, image } = props.data;
-
-  return (
-    <div
-      className={`w-full px-8 py-4 grid grid-cols-12 gap-4 items-center rounded-lg font-lato text-sm font-semibold ${
-        index % 2 === 0 ? 'bg-light-gray' : 'bg-background'
-      }`}>
-      <div className='col-span-1 text-center'>
-        <ProfileIcon url={image} />
-      </div>
-      <div className='col-span-3'>{name}</div>
-      <div className='col-span-4'>{email}</div>
-      <div className='col-span-2'>{gender}</div>
-      <div className='col-span-2'>{country}</div>
-    </div>
-  );
-};
 
 const Users = () => {
   const [data, setData] = useState([]);
@@ -60,7 +42,6 @@ const Users = () => {
   const handleFilter = (value) => {
     if (value !== filter) {
       const rows = dataset.filter((x) => x.gender === value);
-      console.log(value);
       setData(rows);
       setFilter(value);
     } else {
@@ -69,7 +50,6 @@ const Users = () => {
     }
   };
 
-  if (error) return <h1>{error}</h1>;
   return (
     <>
       <Topbar header={'Users'} />
@@ -136,23 +116,29 @@ const Users = () => {
           </div>
         </div>
         <div className='mt-6'>
-          {data.length > 0 ? (
-            <>
-              <Pagination
-                data={data}
-                RenderComponent={User}
-                pageLimit={
-                  Math.ceil(data.length / 10) < 4
-                    ? Math.ceil(data.length / 10)
-                    : 4
-                }
-                dataLimit={10}
-              />
-            </>
+          {error ? (
+            <Error message={error} />
           ) : (
-            <div className='w-full flex justify-center'>
-              <Loader color={'text-primary'} />
-            </div>
+            <>
+              {data.length > 0 ? (
+                <>
+                  <Pagination
+                    data={data}
+                    RenderComponent={User}
+                    pageLimit={
+                      Math.ceil(data.length / 10) < 4
+                        ? Math.ceil(data.length / 10)
+                        : 4
+                    }
+                    dataLimit={10}
+                  />
+                </>
+              ) : (
+                <div className='w-full flex justify-center'>
+                  <Loader color={'text-primary'} />
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>
