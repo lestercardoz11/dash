@@ -20,6 +20,7 @@ module.exports = {
         'light-red': '#E9A0A0',
         'light-green': '#9BDD7C',
         'light-blue': '#6972C3',
+        'light-gray': '#EDEDED',
         'dark-gray': '#666666',
         'card-1': '#DDEFE0',
         'card-2': '#F4ECDD',

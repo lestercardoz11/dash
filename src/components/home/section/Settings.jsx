@@ -1,6 +1,6 @@
 import CalenderIcon from '../../icons/CalenderIcon';
 import { EyeIcon, EyeOffIcon } from '../../icons/EyeIcons';
-import Topbar from './Topbar';
+import Topbar from '../../utils/Topbar';
 import Profile from '../../assets/profile.png';
 import { useState } from 'react';
 

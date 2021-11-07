@@ -5,13 +5,13 @@ import {
   TransactionIcon,
   UsersIcon,
 } from '../../icons/CardIcons';
-import Topbar from './Topbar';
+import Topbar from '../../utils/Topbar';
 
 const Dashboard = () => {
   return (
     <>
       <Topbar header={'Dashboard'} />
-      <div class='my-10 grid grid-cols-4 gap-10'>
+      <div className='my-10 grid grid-cols-4 gap-10'>
         <div className='px-6 py-5 bg-card-1 rounded-2xl'>
           <div className='flex justify-end text-black'>
             <RevenuesIcon />
@@ -46,7 +46,7 @@ const Dashboard = () => {
       <div className='w-full py-7 px-10 bg-white rounded-2xl'>
         <p className='text-lg font-bold font-montserrat'>Activities</p>
       </div>
-      <div class='mt-10 grid grid-cols-2 gap-10'>
+      <div className='mt-10 grid grid-cols-2 gap-10'>
         <div className='w-full py-7 px-10 bg-white rounded-2xl'>
           <div className='flex justify-between'>
             <p className='text-lg font-bold font-montserrat'>Top products</p>

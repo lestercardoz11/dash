@@ -1,6 +1,7 @@
 import React from 'react';
 import Dashboard from './section/Dashboard';
 import Settings from './section/Settings';
+import Users from './section/Users';
 
 const Main = ({ nav }) => {
   const renderModal = () => {
@@ -15,7 +16,7 @@ const Main = ({ nav }) => {
         return;
 
       case 3:
-        return;
+        return <Users />;
 
       case 4:
         return <Settings />;

@@ -1,6 +1,7 @@
-import BellIcon from '../../icons/BellIcon';
-import { ProfileIcon } from '../../icons/ProfileIcon';
-import SearchIcon from '../../icons/SearchIcon';
+import BellIcon from '../icons/BellIcon';
+import Profile from '../assets/profile.png';
+import { ProfileIcon } from '../icons/ProfileIcon';
+import SearchIcon from '../icons/SearchIcon';
 
 const Topbar = ({ header }) => {
   return (
@@ -25,7 +26,7 @@ const Topbar = ({ header }) => {
           <BellIcon />
         </button>
         <button className='ml-2.5'>
-          <ProfileIcon />
+          <ProfileIcon url={Profile} />
         </button>
       </div>
     </div>
