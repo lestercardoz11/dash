@@ -2,7 +2,6 @@
   "name": "dash",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lestercardoz11.github.io/dash",
   "dependencies": {
     "@craco/craco": "^6.4.0",
     "@tailwindcss/postcss7-compat": "^2.2.17",
@@ -18,8 +17,6 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
