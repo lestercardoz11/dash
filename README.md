@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="images/logo.png" alt="Logo" width="80" height="80"> Dash
+  <img src="public/logo192.png" alt="Logo" width="80" height="80"> Dash
 </h1>
 <p align="center">
   <img alt="react" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
