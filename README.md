@@ -13,8 +13,6 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 This repository contains 5 screens basic Dashboard UI that was created with React, Tailwind and D3.js.
 
 Dash has 5 working pages,
